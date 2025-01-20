@@ -1,0 +1,1 @@
+This bug occurs when using the Expo `Linking` API to handle deep links.  If the app is opened from a deep link and then immediately closed, subsequent attempts to open the app via the same deep link may fail.  This is because the `Linking.addEventListener` event listener may not be properly cleaned up. The deep link may trigger an event listener that's not attached anymore.
